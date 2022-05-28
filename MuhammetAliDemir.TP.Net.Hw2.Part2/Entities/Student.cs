@@ -2,6 +2,8 @@
 {
     public class Student : BaseClass
     {
-
+        public Class Class { get; set; }
+        public School School { get; set; }
+        public ICollection<Course> Courses { get; set; }
     }
 }

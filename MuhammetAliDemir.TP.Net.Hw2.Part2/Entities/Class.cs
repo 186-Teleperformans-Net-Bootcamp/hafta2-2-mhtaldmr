@@ -2,6 +2,6 @@
 {
     public class Class : BaseClass
     {
-        
+        public ICollection<Course> Courses { get; set; }
     }
 }

@@ -2,6 +2,6 @@
 {
     public class Teacher : BaseClass
     {
-
+        public Course Course { get; set; }
     }
 }
