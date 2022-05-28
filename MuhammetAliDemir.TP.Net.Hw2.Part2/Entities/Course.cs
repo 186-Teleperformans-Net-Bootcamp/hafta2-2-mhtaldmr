@@ -1,8 +1,7 @@
 ﻿namespace MuhammetAliDemir.TP.Net.Hw2.Part2.Entities
 {
-    public class Course
+    public class Course : BaseClass
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+     
     }
 }
