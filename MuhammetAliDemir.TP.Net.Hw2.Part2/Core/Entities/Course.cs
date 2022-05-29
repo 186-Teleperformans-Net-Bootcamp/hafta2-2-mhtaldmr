@@ -1,7 +1,8 @@
-﻿namespace MuhammetAliDemir.TP.Net.Hw2.Part2.Entities
+﻿using MuhammetAliDemir.TP.Net.Hw2.Part2.Core.Entities;
+
+namespace MuhammetAliDemir.TP.Net.Hw2.Part2.Entities
 {
-    public class Course : BaseClass
+    public class Course : BaseEntity
     {
-     
     }
 }
