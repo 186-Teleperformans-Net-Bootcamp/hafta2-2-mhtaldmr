@@ -1,6 +1,6 @@
-# TP .Net Week 2 Part 1
+# TP .Net Week 2 Part 2
 
-This project is an example of using  Extension Methods, Attribute Usage and Solid Principles Usage.
+This project is an example of using  Entity Framwork6.
 
 ### What I have used so far:
 - Asp.Net Core Web API with `.Net6.0` framework.
@@ -8,7 +8,7 @@ This project is an example of using  Extension Methods, Attribute Usage and Soli
 - MSSQL Server as an Database and SQLServer packages.
 
 ## Requirements
-- Creating a Code-First SchoolDB.
+- Creating a SchoolDB with code-first approach.
 - Each Student has only one School and one Classroom.
 - Each Teacher has only one Course.
 - Classrooms can have one or more Courses.
@@ -18,12 +18,12 @@ This project is an example of using  Extension Methods, Attribute Usage and Soli
 
 To get the project :
 ```
-    git clone https://github.com/186-Teleperformans-Net-Bootcamp/hafta2-1-mhtaldmr.git
+    git clone https://github.com/186-Teleperformans-Net-Bootcamp/hafta2-2-mhtaldmr.git
 ```
 To reach the project folder :
 ```
-    cd hafta2-1-mhtaldmr 
-    cd MuhammetAliDemir.TP.Net.Hw2.Part1
+    cd hafta2-2-mhtaldmr 
+    cd MuhammetAliDemir.TP.Net.Hw2.Part2
 ```
 To run the project:
 - If you are using the Visual Studio, just press **F5** or press **Start Debugging**.
@@ -43,7 +43,13 @@ To run the project:
 ```c
 	"ConnectionStrings": {
     	"DefaultConnection": "Server=.\\SQLExpress; Database=SchoolDB; Trusted_Connection=Yes;"
-  		}
+  	}
+```
+
+- Adding the SQL server to program.cs
+```c
+	var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+	builder.Services.AddDbContext<SchoolDBContext>(options => options.UseSqlServer(connectionString));	
 ```
 
 - Adding a base class which has Id and Name.
@@ -68,3 +74,4 @@ To run the project:
     }
 ```
 
+---
